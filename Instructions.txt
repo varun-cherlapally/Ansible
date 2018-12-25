@@ -1,0 +1,8 @@
+Contents
+
+Ansible Practice Scripts
+
+Playbooks for Httpd install
+Playbook for hosting a benefits.war through tomcat.
+
+Errors : 1. Not hosting through the IP. Please Troubleshoot it. 
