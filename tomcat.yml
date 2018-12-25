@@ -1,0 +1,19 @@
+---
+- name: Tomcat Installation
+  hosts: server1
+  tasks:
+  - name: Install tomcat packages
+    yum:
+      name: tomcat
+      state: present
+  - name: Start service tomcat, if not started
+    service:
+      name: tomcat
+      state: started
+  - name: Download benefits file
+    get_url:
+      url: https://www.oracle.com/webfolder/technetwork/tutorials/obe/fmw/wls/12c/03-DeployApps/files/benefits.war
+      dest: /usr/share/tomcat/webapps/benefits
+      mode: 0440
+    
+
